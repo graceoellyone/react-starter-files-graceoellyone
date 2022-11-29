@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom/client';
 import TaskContainer from './components/TaskContainer';
+import Task from './components/Task';
 /*
 const taskList = [
   {"id":"task1","title":"Buy Milk","isComplete":true},
@@ -15,10 +16,18 @@ const taskList = [
 function App() {
   
    return (
+
       <Fragment>
         <h1 key="heading">Task List</h1>
         <TaskContainer>
-          {/* Task: Nesting Components - Add you tasks here: */}
+        {/* Task: Nesting Components - Add you tasks here: */}
+
+        {TaskList.map(<Task key ={taskList.id} task= {taskList}/>)<Task id={"task1"} title={"Buy Milk"} isComplete={true}/>},
+         
+        
+ 
+
+ 
         </TaskContainer>
       </Fragment>
   );

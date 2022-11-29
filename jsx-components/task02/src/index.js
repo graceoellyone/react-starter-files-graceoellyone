@@ -5,7 +5,9 @@ import Profile from './Profile';
 function App() {
   return (
       //Replace the string below with the JSX Profile component
-      "Return the JSX Profile function as a JSX element here"
+      //"Return the JSX Profile function as a JSX element here"
+      <Profile name="Grace" bio="enjoy walking."/>
+      
   );
 }
 
