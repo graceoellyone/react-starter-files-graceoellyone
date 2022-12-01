@@ -4,16 +4,16 @@ import Book from './components/Book';
 import data from './models/books.json';
 
 
-function App() {
+//function App() {
+  const App = (props) => {
   const [books, setBooks] = useState(data);
-  async function findBooks (value) {
+      async function findBooks (value) {
 
-    const url = `https://www.googleapis.com/books/v1/volumes?q=${value}&f
-    ilter=paid-ebooks&print-type=books&projection=lite`;
-     const results = await fetch(url).then(res =>
-    res.json());
+    const url = `https://www.googleapis.com/books/v1/volumes?q=${value}&filter=paid-ebooks&print-type=books&projection=lite`;
+    const results = await fetch(url).then(res =>
+   res.json());
      if (!results.error) {
-     setBooks(results.items);
+    setBooks(results.items);
      }
     
     
