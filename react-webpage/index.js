@@ -1,18 +1,19 @@
+'use strict';
+
 function ClickableButton() {
 
   const [clicked, setClick] = React.useState(false);
 
- 
   if (clicked) {
- return React.createElement('h1', {}, 'Hello World!');
- }
+    return 'Nothing here yet! Change this text to add more info.';
+  }
 
   return React.createElement(
     'button', {
-        className : 'main-button',
-        onClick: () => setClick(true)
+    
+    onClick: () => setClick(true)
   },
-    'Press Here'
+    'Click To Reveal'
   );
 }
 

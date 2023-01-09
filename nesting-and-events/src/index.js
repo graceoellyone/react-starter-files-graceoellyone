@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, {Fragment} from 'react';
 import ReactDOM from 'react-dom/client';
 import TaskContainer from './components/TaskContainer';
 import Task from './components/Task';
@@ -15,14 +15,18 @@ const taskList = [
 
 
 function App() {
-  
+// Task Lifting state and callbacks
+  function toggleComplete(id){
+    
+    console.log(`Task with the id '${id}' was clicked`);  
+  }
+  <Task isCoomplete={isCoomplete}/>
    return (
 
       <Fragment>
         <h1 key="heading">Task List</h1>
         <TaskContainer>
-        {/* Task: Nesting Components - Add you tasks here: */}
-
+        {
         TaskList.map(<Task key ={taskList.id} task={taskList}/>)
         <Task id={"task1"} title={"Buy Milk"} isComplete={true}/>,
         <Task id={"task2"} title={"Read a book"} isComplete={false}/>,
@@ -30,8 +34,7 @@ function App() {
         <Task id={"task4"} title={"Drink water"} isComplete={false}/>,
         <Task id={"task5"} title={"Visit the puppy shelter"} isComplete={true}/>,
         <Task id={"task6"} title={"Watch Bad Sisters"} isComplete={false}/>,
- 
-
+}
  
         </TaskContainer>
       </Fragment>
